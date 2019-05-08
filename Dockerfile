@@ -1,5 +1,5 @@
 FROM ubuntu:zesty
-MAINTAINER battlestarcoin <admin@battlestarcoin.com>
+MAINTAINER battlestarcoin <admin@battlestarcoin.org>
 
 RUN groupadd -r batl && useradd -r -g batl batl
 
