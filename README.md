@@ -10,7 +10,7 @@ docker run -d --name battlestarcoin -p 16914:16914 -v batl:/home/batl index.dock
 ```
 
 
-## docker-compose.yml
+## Or with docker-compose.yml
 
 ```yaml
 version: '2'
@@ -30,7 +30,7 @@ volumes:
     driver: local
 ```
 
-## You can the call the wallet with docker exec
+## You can then call the wallets functions via docker exec
 
 ```
 docker exec -i -t battlestarcoin /home/batl/batld getinfo
