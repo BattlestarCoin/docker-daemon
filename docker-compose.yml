@@ -1,0 +1,15 @@
+version: '2'
+services:
+  bitstar:
+    image: battlestarcoin/linux-node
+    restart: always
+    networks:
+      - bridge
+    ports:
+      - 16914:16914
+    volumes:
+      - batl:/home/batl/
+volumes:
+  batl:
+    name: batl
+    driver: local
