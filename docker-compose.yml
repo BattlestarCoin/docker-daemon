@@ -1,6 +1,6 @@
 version: '2'
 services:
-  bitstar:
+  batlstar:
     image: battlestarcoin/linux-node
     restart: always
     networks:
