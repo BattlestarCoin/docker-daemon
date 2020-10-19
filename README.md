@@ -33,5 +33,5 @@ volumes:
 ## You can then call the wallets functions via docker exec
 
 ```
-docker exec -i -t battlestarcoin /home/batl/batld getinfo
+docker exec -i -t battlestarcoin batld getinfo
 ```
