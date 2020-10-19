@@ -29,7 +29,7 @@ RUN apt update && \
 	chown -R batl:batl /usr/sbin/batld && \
 	chmod +x /usr/sbin/batld
 	   
-WORKDIR /home/batld
+WORKDIR /home/batl
 
 USER batl
 
