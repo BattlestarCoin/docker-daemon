@@ -2,6 +2,9 @@ FROM ubuntu:xenial as makecoin
 
 MAINTAINER battlestarcoin <admin@battlestarcoin.org>
 
+COPY docker-entrypoint.sh /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]
+
 WORKDIR /home
 
 RUN apt update && \
