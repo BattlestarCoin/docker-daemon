@@ -53,7 +53,7 @@ Docker compose example:
 
 Docker command line example
 
-  docker run -d --name batl -p 16914:16914 -v batl:/home/batl --restart unless-stopped -e RPCUSER='kj321l3kj21n3' -e RPCPASS='plok546k546po' -e RPCIP='172.16.5.1' index.docker.io/battlestarcoin/linux-node:latest
+  docker run -d --name batl -p 16914:16914 -v batl:/home/batl --restart unless-stopped -e RPCUSER=kj321l3kj21n3 -e RPCPASS=plok546k546po -e RPCIP=172.16.5.1 index.docker.io/battlestarcoin/linux-node:latest
 
 ```
 
