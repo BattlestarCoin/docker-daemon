@@ -26,8 +26,7 @@ RUN apt update && \
 	mkdir /home/batl && \
 	mkdir /home/batl/.batl && \
 	echo "rpcuser=$(cat /dev/urandom | fold -w 80 | base64 | head -n 1)\nrpcpassword=$(cat /dev/urandom | base64 | fold -w 80 | head -n 1)" > /home/batl/.batl/batl.conf && \
-	chown -R batl:batl /home/batl /entrypoint.sh && \
-	chown -R batl:batl /usr/sbin/batld /entrypoint.sh && \
+	chown -R batl:batl /home/batl /usr/sbin/batld /entrypoint.sh && \
 	chmod +x /usr/sbin/batld /entrypoint.sh
 	   
 WORKDIR /home/batl/
