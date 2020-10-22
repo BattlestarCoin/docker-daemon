@@ -18,6 +18,7 @@ MAINTAINER battlestarcoin <admin@battlestarcoin.org>
 RUN groupadd -r batl && useradd -r -g batl batl
 
 COPY --from=makecoin /home/coin/src/battlestarcoind /usr/sbin/batld
+COPY docker-entrypoint.sh /entrypoint.sh
 
 RUN apt update && \
 	apt install -y libdb5.3++-dev libminiupnpc-dev libboost-all-dev libssl1.0.0  && \
@@ -25,17 +26,16 @@ RUN apt update && \
 	mkdir /home/batl && \
 	mkdir /home/batl/.batl && \
 	echo "rpcuser=$(cat /dev/urandom | fold -w 80 | base64 | head -n 1)\nrpcpassword=$(cat /dev/urandom | base64 | fold -w 80 | head -n 1)" > /home/batl/.batl/batl.conf && \
-	chown -R batl:batl /home/batl && \
-	chown -R batl:batl /usr/sbin/batld && \
-	chmod +x /usr/sbin/batld
+	chown -R batl:batl /home/batl /entrypoint.sh && \
+	chown -R batl:batl /usr/sbin/batld /entrypoint.sh && \
+	chmod +x /usr/sbin/batld /entrypoint.sh
 	   
-WORKDIR /home/batl
+WORKDIR /home/batl/
 
 USER batl
 
 EXPOSE 16914
 
-COPY docker-entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
 
 CMD ["batld"]
