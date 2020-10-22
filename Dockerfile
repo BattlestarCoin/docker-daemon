@@ -2,9 +2,6 @@ FROM ubuntu:xenial as makecoin
 
 MAINTAINER battlestarcoin <admin@battlestarcoin.org>
 
-COPY docker-entrypoint.sh /entrypoint.sh
-ENTRYPOINT ["/entrypoint.sh"]
-
 WORKDIR /home
 
 RUN apt update && \
@@ -37,5 +34,8 @@ WORKDIR /home/batl
 USER batl
 
 EXPOSE 16914
+
+COPY docker-entrypoint.sh /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]
 
 CMD ["batld"]
