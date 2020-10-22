@@ -1,7 +1,7 @@
 Battlestar Coin V1.2.3 Node
 ========
 
-This image is to run Battlestarcoin daemon as a node but if you add your wallet.dat into /home/batl/.batl, you can also use this as a personal wallet.  And wallet wills take if you add some coins
+This image is to run Battlestarcoin daemon as a node but if you add your wallet.dat into /home/batl/.batl, you can also use this as a personal wallet.  And wallet will stake if you add some coins
 
 ### Start the node from docker command line 
 
