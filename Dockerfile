@@ -4,7 +4,7 @@ MAINTAINER battlestarcoin <admin@battlestarcoin.org>
 
 RUN groupadd -r batlnext && useradd -r -g batlnext batlnext
 
-COPY bin/* /usr/sbin
+COPY bin/* /usr/sbin/
 COPY docker-entrypoint.sh /entrypoint.sh
 
 RUN apt update && \
