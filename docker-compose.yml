@@ -1,7 +1,7 @@
 version: '2'
 services:
   batlnext:
-    image: battlestarcoin/linux-node:next
+    image: ghcr.io/battlestarcoin/docker-daemon:master
     restart: always
     networks:
       - bridge
