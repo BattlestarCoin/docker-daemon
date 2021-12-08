@@ -1,15 +1,15 @@
 version: '2'
 services:
-  batlstar:
-    image: battlestarcoin/linux-node
+  batlnext:
+    image: battlestarcoin/linux-node:next
     restart: always
     networks:
       - bridge
     ports:
       - 16914:16914
     volumes:
-      - batl:/home/batl/
+      - batlnext:/home/batlnext/
 volumes:
-  batl:
-    name: batl
+  batlnext:
+    name: batlnext
     driver: local
