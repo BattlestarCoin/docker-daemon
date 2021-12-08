@@ -1,6 +1,6 @@
 #!/bin/bash
 
-CONFIG=/home/batl/.batl/batl.conf
+CONFIG=/home/batlnext/.batlnext/batlnext.conf
 
 declare -A target
 declare -A envar
